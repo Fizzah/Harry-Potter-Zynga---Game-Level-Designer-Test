@@ -1,0 +1,174 @@
+ # ----- Level mp_6995 ---------------------------
+# Designed By: Wrp
+# Goals: Lantern, Spread, Ticket Machine
+# Spells: Lumos, Reparo
+# Target Difficulty: Medium
+# -----------------------------------------------
+
+win=spread
+win=collect
+
+lose=moves 26
+
+# ----- Star/Points Targets ----------------
+
+star=5000
+star=15000
+star=20000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvws
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+color.s=Blocker|blocker|true
+
+weights=16 16 16 16 16 20
+
+# ----- The Gameboard ----------------------
+
+row=.RRRRRRR.
+row=..RR.RR..
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=..RR.RR..
+row=.RRRRRRR.
+
+blockers=.........
+blockers=.........
+blockers=2.......2
+blockers=2.22222.2
+blockers=2.22222.2
+blockers=2.22222.2
+blockers=2.22222.2
+blockers=2.......2
+blockers=.........
+
+
+spread=.........
+spread=.........
+spread=1.1...1.1
+spread=.1.....1.
+spread=1.1...1.1
+spread=.1.....1.
+spread=1.1...1.1
+spread=.........
+spread=.........
+
+ticketMachine.1.pos=4,1
+ticketMachine.2.pos=7,1
+
+boost=.........
+boost=.........
+boost=...1.1...
+boost=...1.1...
+boost=..1...1..
+boost=...1.1...
+boost=....1....
+boost=.........
+boost=.........
+
+# ----- Spell Rules ----------------------
+
+
+
+SpellLumosLantern.enabled=true
+SpellLumosLantern.castLimit=3
+SpellLumosLantern.spawnCount=5
+
+SpellLumos.enabled=true
+SpellLumos.enabled=true
+
+dark=.........
+dark=.........
+dark=.........
+dark=1.1...1.1
+dark=111...111
+dark=1.1...1.1
+dark=111...111
+dark=1.1...1.1
+dark=.........
+
+SpellReparo.enabled=true
+SpellReparo.goals=ticketMachine
+
+SpellReparo.junkpile=.........
+SpellReparo.junkpile=.........
+SpellReparo.junkpile=.........
+SpellReparo.junkpile=.........
+SpellReparo.junkpile=.33...22.
+SpellReparo.junkpile=.33...22.
+SpellReparo.junkpile=.........
+SpellReparo.junkpile=.........
+SpellReparo.junkpile=.........
+
+# ----- Collectable Items --------------------
+
+target.blockers.className=blocker
+target.blockers.color=s
+target.blockers.goal=15
+target.blockers.min=8
+target.blockers.max=8
+target.blockers.percent=70
+target.blockers.levelWeights=50 50
+target.blockers.sprite=Blocker
+target.blockers.type=flyto
+target.blockers.rotateOnFlyTo=false
+target.blockers.flyToUI=CollectorMaster2
+target.blockers.dropColumnFilter=11.....11
+
+target.ticketMachine.className=ticketMachine
+target.ticketMachine.sprite=TicketMachineHud
+target.ticketMachine.type=flyto
+target.ticketMachine.goal=15
+target.ticketMachine.flyToUI=CollectorMaster1
+
+# ------- Special Rules ------------
+
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+#bg_style=alt33 #mud
+
+#hardLevel=true
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
+

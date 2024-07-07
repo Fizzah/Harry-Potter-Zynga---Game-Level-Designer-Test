@@ -1,0 +1,151 @@
+# ----- Level mp7405 ------------------------
+
+# Designed By: Fizzah
+# Goals: Mirror, Bookshelf,Locks
+# Target Difficulty: Medium
+# -----------------------------------------------
+
+win=lock
+win=book 20
+win=mirror 4
+win=collect
+
+lose=moves 18
+
+# ----- Star/Points Targets ----------------
+
+star=15000
+star=100000
+star=200000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyv
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+
+weights=20 20 20 20 20
+
+# ----- The Gameboard ----------------------
+
+row=rRRRRRRRr
+row=byRRRRRyb
+row=vvRRRRRvv
+row=.RRRRRRR.
+row=..RR.RR..
+row=.RRRRRRR.
+row=vvRRRRRvv
+row=byRRRRRyb
+row=rRRRRRRRr
+
+gramophone.row=.......1.
+gramophone.row=........1
+gramophone.row=........1
+gramophone.row=....1...1
+gramophone.row=...1.1..1
+gramophone.row=....1...1
+gramophone.row=........1
+gramophone.row=........1
+gramophone.row=.......1.
+
+book=33.......
+book=33.......
+book=.......44
+book=.......44
+book=.........
+book=11.......
+book=11.......
+book=.......22
+book=.......22
+
+book_color1=rbgyv
+book_color2=rbgyv
+book_color3=rbgyv
+book_color4=rbgyv
+
+boost=....1....
+boost=.........
+boost=.........
+boost=..1...1..
+boost=.........
+boost=..1...1..
+boost=.........
+boost=.........
+boost=....1....
+
+lock=...3.3...
+lock=...5.5...
+lock=...5.5...
+lock=..55555..
+lock=...5.5...
+lock=..55555..
+lock=...545...
+lock=....5....
+lock=....5....
+
+
+mirror.1.coord=3,3
+mirror.1.color=r
+mirror.1.count=30
+
+mirror.2.coord=4,8
+mirror.2.color=b
+mirror.2.count=30
+
+mirror.3.coord=6,3
+mirror.3.color=g
+mirror.3.count=30
+
+mirror.4.coord=8,8
+mirror.4.color=y
+mirror.4.count=30
+
+
+# ----- Collectable Items --------------------
+
+target.gramophone.className=gramophone
+target.gramophone.sprite=GramophoneHud
+target.gramophone.type=flyto
+target.gramophone.goal=56
+target.gramophone.flyToUI=CollectorMaster3
+
+# ----- Special Rules ----------------------
+
+rack_intro=type 2 duration 0.3 delay 0.01
+rack_outro=type 2 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt33
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off

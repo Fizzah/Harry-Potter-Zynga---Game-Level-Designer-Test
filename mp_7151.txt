@@ -1,0 +1,174 @@
+# ----- Level mp_7151 ---------------------------
+# Designed By: Fizzah
+# Goals: Candles, Mandrake, Leaves
+# Spells Used: Accio Chattering Teeth, Tergeo
+# Target Difficulty: Easy
+# -----------------------------------------------
+
+win=mud
+win=mandrake 9
+win=collect
+
+lose=moves 26
+
+# ----- Star/Points Targets ----------------
+
+star=15000
+star=100000
+star=200000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvcw
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+color.c=deadCandle|candle|true
+
+weights=16 16 16 16 16 20 
+
+# ----- The Gameboard ----------------------
+
+row=..RRRRR..
+row=RRRRRRRRR
+row=..RRRRR..
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=wRRRRRRRw
+row=RRRRRRRRR
+row=wRRRRRRRw
+row=R.RRRRR.R
+
+mud=..1122.2.
+mud=112222222
+mud=.1222222.
+mud=11221122.
+mud=11221122.
+mud=..11222..
+mud=..11222..
+mud=11..11111
+mud=11.11..11
+
+mudVariant=leaves
+
+candle=..21.....
+candle=..21.....
+candle=.........
+candle=21.......
+candle=21.......
+candle=......111
+candle=......222
+candle=......2..
+candle=.........
+
+mandrake=....66...
+mandrake=....66...
+mandrake=..55.....
+mandrake=..55.....
+mandrake=....66...
+mandrake=....66...	
+mandrake=.........
+mandrake=66..55.66
+mandrake=66..55.66
+
+boost=.........
+boost=....1.1..
+boost=.....1.1.
+boost=......1..
+boost=.......1.
+boost=.........
+boost=.........
+boost=11.......
+boost=.........
+
+
+
+# ----- Collectable Items --------------------
+
+
+
+target.deadCandle.color=c
+target.deadCandle.goal=24
+target.deadCandle.type=flyto
+target.deadCandle.min=10
+target.deadCandle.max=10
+target.deadCandle.percent=100
+target.deadCandle.levelWeights=0 100
+target.deadCandle.rotateOnFlyTo=false
+target.deadCandle.flyToUI=CollectorMaster2
+target.deadCandle.dropColumnFilter=111111111
+
+
+
+# ----- Spell Rules ----------------------
+
+
+SpellAccioChatteringTeeth.enabled=true
+SpellAccioChatteringTeeth.numPieces=4
+SpellAccioChatteringTeeth.castLimit=2
+
+
+
+SpellTergeo.enabled=true
+
+
+SpellTergeo.spots=....11...
+SpellTergeo.spots=.......22
+SpellTergeo.spots=.....22..
+SpellTergeo.spots=..11.....
+SpellTergeo.spots=..11.....
+SpellTergeo.spots=.....44..
+SpellTergeo.spots=.....44..
+SpellTergeo.spots=22.......
+SpellTergeo.spots=22.......
+
+
+target.spell.color=w
+target.spell.isWinCondition=false
+target.spell.type=flyto
+target.spell.flyToUI=FlyToSpellMeter
+target.spell.refillAmount=12
+
+# ----- Special Rules ----------------------
+
+rack_intro=type 2 duration 0.3 delay 0.01
+rack_outro=type 2 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt33
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=4
+
+#
+#CPUA Paused on MP
+#
+cpu_assistance=off
